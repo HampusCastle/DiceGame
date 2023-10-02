@@ -12,14 +12,13 @@ public class Players {
         for (Player player : playerList) {
             player.rollPlayerDices();
         }
-        //Hitta max Score
-        //https://www.baeldung.com/java-collection-min-max
+        //Hitta max Score - https://www.baeldung.com/java-collection-min-max
         int maxScore = playerList
                 .stream()
                 .max(Comparator.comparing(Player::getScore))
                 .orElseThrow(NoSuchElementException::new).getScore();
-        //Alla som har score = max score sätt wonRound = true
-        ArrayList<Player> winners = new ArrayList<Player>(playerList);
+
+        ArrayList<Player> winners = new ArrayList<>(playerList);
         winners.removeIf(s -> s.getScore() < maxScore);
         if (winners.size() > 1) {
             System.out.println("There has been a tie!");
