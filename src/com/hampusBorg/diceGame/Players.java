@@ -22,13 +22,13 @@ public class Players {
         ArrayList<Player> winners = new ArrayList<Player>(playerList);
         winners.removeIf(s -> s.getScore() < maxScore);
         if (winners.size() > 1) {
-            System.out.println("We have a tie between");
+            System.out.println("There has been a tie!");
             for (Player winner : winners)
                 System.out.println(winner.name + " ");
-            System.out.println("Congratulations to you all! 😄");
+            System.out.println("Congratulations to you! 😄");
         } else {
             for (Player winner : winners)
-                System.out.println("You won " + winner.name + "!");
+                System.out.println(winner.name + " won!\n Congratulations and well played.");
         }
     }
 

@@ -1,9 +1,5 @@
 package com.hampusBorg.diceGame;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
-
 public class Player {
     public String name;
     private int score = 0;
