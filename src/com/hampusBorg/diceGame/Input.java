@@ -15,7 +15,7 @@ public class Input {
             _scanner.next();
         }
         int result = _scanner.nextInt();
-        _scanner.nextLine(); //https://stackoverflow.com/questions/22542833/different-java-scanner-for-input-of-different-types
+        _scanner.nextLine();
         return result;
     }
 

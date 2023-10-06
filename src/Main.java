@@ -5,17 +5,6 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        //TODO
-        // Skapa ett träningsspel där man kan välja antal spelare - VG
-        // Där man kan välja antal träningar
-        // Där man kan välja spelarnas namn
-        // Varje spelare ska ha en/flera träningar var där den med högst "poäng" vinner (minst 2 spelare).
-        // För VG - Två vinnare - hantera detta på ett relevant sätt
-        // Scanner befinner sig inom en egen klass
-        //  Hantera att rätt svar kommer in under inmatning
-        // Namn får bara vara ‘string’
-        // Nummer får bara vara ‘integer’
-        // Tre relevanta enhetstester
 
         System.out.println("Welcome to the Dice game of complete superiority to every other Dice game!");
         Input input = new Input();
@@ -40,7 +29,7 @@ public class Main {
                 System.out.println("Choose how many players to join the game! (Minimum 2 players)️");
                 numOfPlayers = input.inputInt();
                 if (numOfPlayers < 2) {
-                    System.out.println("The number has to be higher than 2");
+                    System.out.println("The number has to be higher than 1");
                 }
             }
 

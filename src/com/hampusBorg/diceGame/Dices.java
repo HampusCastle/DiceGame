@@ -21,5 +21,6 @@ public class Dices {
         for (int i = 0; i < numberOfDices; i++) {
             diceList.add(new Dice());
         }
+
     }
 }
