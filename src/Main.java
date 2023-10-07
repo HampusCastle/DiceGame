@@ -4,7 +4,7 @@ import com.hampusBorg.diceGame.Players;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         System.out.println("Welcome to the Dice game of complete superiority to every other Dice game!");
         Input input = new Input();
@@ -21,7 +21,6 @@ public class Main {
                 if (usedDices < 2) {
                     System.out.println("There should be more than 1 dice, so the minimum is 2\n Please state how many dices you want to use");
                 }
-
             }
 
             int numOfPlayers = 0;
@@ -68,8 +67,8 @@ public class Main {
 
             System.out.println("Game has finished");
         } while (isPlaying);
-
     }
 }
+
 
 

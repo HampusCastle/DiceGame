@@ -5,11 +5,12 @@ import java.util.ArrayList;
 public class Dices {
     public ArrayList<Dice> diceList;
 
-    public int rollAllDices() {
+    public int rollAllDices() throws InterruptedException {
         int score = 0;
         for (Dice dice : diceList) {
             int diceRoll = dice.roll();
             System.out.println("The dice rolled " + diceRoll);
+            Thread.sleep(1000);
             score += diceRoll;
         }
         System.out.println("Good job, your average score was " + score / diceList.size());

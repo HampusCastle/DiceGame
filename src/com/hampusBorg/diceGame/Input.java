@@ -20,7 +20,13 @@ public class Input {
     }
 
     public String inputString() {
+        while(!_scanner.hasNextLine()) {
+            System.out.println("Those are not letters");
+            _scanner.next();
+
+        }
         return _scanner.nextLine();
+
     }
 }
 
