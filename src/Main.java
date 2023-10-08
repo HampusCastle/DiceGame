@@ -16,19 +16,19 @@ public class Main {
 
             int usedDices = 0;
             while (usedDices <= 1) {
-                System.out.println("How many dices should we use for this game? More than one please!");
+                System.out.println("How many dices should we use for this game?");
                 usedDices = input.inputInt();
                 if (usedDices < 2) {
-                    System.out.println("There should be more than 1 dice, so the minimum is 2\n Please state how many dices you want to use");
+                    System.out.println("There should be more than 1 dice, so the minimum is 2!");
                 }
             }
 
             int numOfPlayers = 0;
             while (numOfPlayers < 2) {
-                System.out.println("Choose how many players to join the game! (Minimum 2 players)️");
+                System.out.println("Choose how many players to join the game?");
                 numOfPlayers = input.inputInt();
                 if (numOfPlayers < 2) {
-                    System.out.println("The number has to be higher than 1");
+                    System.out.println("There should be at least 2 players playing the game");
                 }
             }
 

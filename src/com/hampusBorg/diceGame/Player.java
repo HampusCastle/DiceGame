@@ -1,5 +1,8 @@
 package com.hampusBorg.diceGame;
 
+import java.io.IOException;
+
+
 public class Player {
     public String name;
     private int score = 0;
@@ -14,12 +17,20 @@ public class Player {
     }
 
     public void rollPlayerDices() throws InterruptedException {
-        System.out.println(this.name + " is rolling their dices");
-        Thread.sleep(2000);
+        System.out.println(this.name + " is rolling, press enter to continue");
+        waitingForInput();
         this.score = this.dices.rollAllDices();
-        System.out.println(this.name + " scored a total of " + this.score + " !");
-        Thread.sleep(1000);
+        System.out.println(this.name + " scored a total of " + this.score + " !\n");
     }
+    private void waitingForInput() {
+        try {
+            int number;
+            while((number = System.in.read()) != -1 && number != '\n'); {
+            }
+        } catch (IOException error) {
+            error.printStackTrace();
+        }
 
 
+}
 }

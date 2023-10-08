@@ -1,13 +1,12 @@
 package com.hampusborg.diceGame.testa;
-import java.util.Random;
-import com.hampusBorg.diceGame.Dice;
-import com.hampusBorg.diceGame.Dices;
-import org.junit.jupiter.api.Test;
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.hampusBorg.diceGame.Dice;
+import org.junit.jupiter.api.Test;
+
+import java.util.function.BooleanSupplier;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 class DiceTest {
@@ -17,7 +16,10 @@ class DiceTest {
         Dice dice = new Dice();
         for(int i = 0; i<100; i++) {
             System.out.println(dice.roll());
+            dice.setDice(dice.roll());
+            assertTrue(dice.getDice() >= 0 && dice.getDice() <= 7);
         }
+
     }
 
     @Test

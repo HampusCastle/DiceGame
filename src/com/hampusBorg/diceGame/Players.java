@@ -13,7 +13,6 @@ public class Players {
             player.rollPlayerDices();
             Thread.sleep(2000);
         }
-        //Hitta max Score - https://www.baeldung.com/java-collection-min-max
         int maxScore = playerList
                 .stream()
                 .max(Comparator.comparing(Player::getScore))
@@ -25,7 +24,7 @@ public class Players {
             System.out.println("There has been a tie!");
             Thread.sleep(2000);
             for (Player winner : winners)
-                System.out.println(winner.name + " Congratulations to you! 😄" );
+                System.out.println(winner.name + " congratulations to you! 😄" );
         } else {
             for (Player winner : winners)
                 System.out.println(winner.name + " won!\n Congratulations and well played.");

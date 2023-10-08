@@ -11,7 +11,7 @@ public class Input {
 
     public int inputInt() {
         while (!_scanner.hasNextInt()) {
-            System.out.println("Please enter a correct number");
+            System.out.println("Please enter a correct number using the numbered keys :)");
             _scanner.next();
         }
         int result = _scanner.nextInt();
@@ -20,13 +20,18 @@ public class Input {
     }
 
     public String inputString() {
-        while(!_scanner.hasNextLine()) {
-            System.out.println("Those are not letters");
-            _scanner.next();
+        String inputString;
+        do {
+            inputString = getScanner().nextLine().trim();
+            if (inputString.isEmpty() || !inputString.matches("^[a-öA-Ö ]*$")) {
+                System.out.println("Give me some letters...");
+            }
+        } while (inputString.isEmpty() || !inputString.matches("^[a-öA-Ö ]*$"));
+        return inputString;
+    }
 
-        }
-        return _scanner.nextLine();
-
+    public Scanner getScanner() {
+        return _scanner;
     }
 }
 
