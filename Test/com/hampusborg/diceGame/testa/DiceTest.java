@@ -20,30 +20,13 @@ class DiceTest {
         }
     }
 
-    public String name;
-    public Dices dices;
-    @Test
-    int players() {
-        int numOfPlayers = 1;
-        System.out.println("Choose how many players to join the game! (Minimum 2 players)️");
-        while (numOfPlayers > 2) {
-            assertEquals(numOfPlayers > 2, numOfPlayers);
-            System.out.println("Enough players");
-            if (numOfPlayers < 2) {
-                System.out.println("The number has to be higher than 1");
-            }
-            return numOfPlayers;
-        }
-        return numOfPlayers;
-
-    }
     @Test
     void Dice() {
         Dice dice = null;
         if (dice != null) {
-            System.out.println("It does indeed work");
-        } else {
             System.out.println("This object does not exist");
+        } else {
+            System.out.println("It does indeed work");
         }
 
     }
